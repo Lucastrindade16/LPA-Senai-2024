@@ -1,6 +1,12 @@
+/*
+ * Algoritmo: Animação
+ * @Lucas Trindade
+ * 13/03/2024
+*/
+
 programa
 {
-	inclua biblioteca Util --> u
+	inclua biblioteca Util --> u
 	
 	funcao inicio()
 	{
@@ -12,61 +18,30 @@ programa
 				limpa()
 				se (andando == 0)
 				{
-					inteiro brancos = 1
-					inteiro quantidade = coluna * 3 + 14
-					enquanto (brancos <= quantidade)
-					{
-						escreva (" ")
-						brancos++
-					}
+					branco(coluna * 3 + 14)
 					escreva("\\ /\n")
-					brancos = 2
-					quantidade = coluna * 3
-					enquanto (brancos <= quantidade)
-					{
-						escreva(" ")
-						brancos++
-					}
+					branco(coluna * 3)
 					escreva("( )( )( )( )( 0.0 )")
 				}senao{
-					inteiro brancos = 
-					inteiro quantidade = coluna * 3 + 7
 					
-					enquanto (brancos <= quantidade)
-					{
-						escreva (" ")
-						brancos++
-					}
+					branco(coluna * 3 + 7)
 					escreva("( )")
-					brancos = 3
-					quantidade = coluna * 4
-					enquanto (brancos <= quantidade)
-					{
-						escreva(" ")
-						brancos++
-					}
-					escreva("\\/\n")
-					brancos = 2
-					quantidade = coluna * 3 + 2
-					enquanto (brancos <= quantidade)
-					{
-						escreva(" ")
-					}
-					
-				u.aguarde(500)
+					branco(4)
+					escreva("\\ /\n")
+					branco(coluna *3 + 2)
+					escreva("( )( ) ( )( 0.0 )")
 				}
+				u.aguarde(500)
 			}
 		}
 	}
+	funcao branco (inteiro quantidade)
+	{
+		inteiro brancos = 1
+		enquanto (brancos <= quantidade)
+		{
+			escreva (" ")
+			brancos++
+		}
+	}
 }
-/* $$$ Portugol Studio $$$ 
- * 
- * Esta seção do arquivo guarda informações do Portugol Studio.
- * Você pode apagá-la se estiver utilizando outro editor.
- * 
- * @POSICAO-CURSOR = 1142; 
- * @PONTOS-DE-PARADA = ;
- * @SIMBOLOS-INSPECIONADOS = ;
- * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
- * @FILTRO-ARVORE-TIPOS-DE-SIMBOLO = variavel, vetor, matriz, funcao;
- */
